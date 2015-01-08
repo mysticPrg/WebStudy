@@ -8,6 +8,6 @@ WORKDIR /home/WebStudy
 RUN npm install
 
 RUN npm install -g bower
-RUN bower install --allow-root
+RUN bower install --allow-root -F
 
 CMD node index

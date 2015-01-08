@@ -1,0 +1,14 @@
+{
+  "name": "WebStudy",
+  "version": "0.0.0",
+  "description": "mobile controlled web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mysticPrg",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.10.7"
+  }
+}

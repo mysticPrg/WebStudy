@@ -1,0 +1,25 @@
+<md-content>
+    <p>this is home, Version : {{version}}</p>
+
+    <p>Selected Value: <span class="radioValue">{{ data.group1 }}</span></p>
+    <md-radio-group ng-model="data.group1">
+        <md-radio-button value="Apple" aria-label="Label 1">Apple</md-radio-button>
+        <md-radio-button value="Banana"> Banana</md-radio-button>
+        <md-radio-button value="Mango" aria-label="Label 3">Mango</md-radio-button>
+    </md-radio-group>
+
+    <md-input-container>
+        <label>test</label>
+        <input type="text">
+    </md-input-container>
+
+    <md-input-container>
+        <label>test</label>
+        <textarea></textarea>
+    </md-input-container>
+
+    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+
+    <div class="animate-switch-container" ng-switch on="selectedIndex" md-swipe-left="selectedIndex+=1;" md-swipe-right="selectedIndex-=1;">
+    </div>
+</md-content>

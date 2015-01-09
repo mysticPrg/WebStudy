@@ -10,4 +10,6 @@ RUN npm install
 RUN npm install -g bower
 RUN bower install --allow-root -F
 
+RUN npm install -g karma-cli
+
 CMD node index

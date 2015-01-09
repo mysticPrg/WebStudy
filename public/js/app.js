@@ -12,7 +12,7 @@ define([
     window.Hammer = hammer;
     var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute']);
 
-    app.config(function ($routeProvider, $mdThemingProvider) {
+    app.config(function ($routeProvider) {
 
         $routeProvider
             .when('/home', angularAMD.route({

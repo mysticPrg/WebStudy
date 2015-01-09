@@ -3,30 +3,30 @@
  */
 
 define([
-    'angularAMD',
-    'hammer',
-    'angular-route',
-    'angular-material'
+	'angularAMD',
+	'hammer',
+	'angular-route',
+	'angular-material'
 ], function (angularAMD, hammer) {
 
-    window.Hammer = hammer;
-    var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute']);
+	window.Hammer = hammer;
+	var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute']);
 
-    app.config(function ($routeProvider) {
+	app.config(function ($routeProvider) {
 
-        $routeProvider
-            .when('/home', angularAMD.route({
-                templateUrl: 'views/home.html',
-                controller: 'homeCtrl',
-                controllerUrl: 'Controller/homeCtrl'
-            }))
+		$routeProvider
+			.when('/home', angularAMD.route({
+				templateUrl: 'views/home.html',
+				controller: 'homeCtrl',
+				controllerUrl: 'Controller/homeCtrl'
+			}))
 
-            .otherwise('/home');
+			.otherwise('/home');
 
-        //$mdThemingProvider.theme('default')
-        //    .primaryColor('blue')
-        //    .accentColor('orange');
-    });
+		//$mdThemingProvider.theme('default')
+		//    .primaryColor('blue')
+		//    .accentColor('orange');
+	});
 
-    return angularAMD.bootstrap(app);
+	return angularAMD.bootstrap(app);
 });

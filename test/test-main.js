@@ -31,11 +31,7 @@
             'angular-material': '../../bower_components/angular-material/angular-material',
             'angular-route': '../../bower_components/angular-route/angular-route',
             'angular-mocks': '../../bower_components/angular-mocks/angular-mocks',
-            'hammer': '../../bower_components/hammerjs/hammer',
-
-            'Service': '../services',
-            'Controller': '../controllers',
-            'Directive': '../directives'
+            'hammer': '../../bower_components/hammerjs/hammer'
         },
 
         shim: {
@@ -54,7 +50,10 @@
 
         map: {
             '*': {
-                'css': '../../bower_components/require-css/css'
+                'css': '../../bower_components/require-css/css',
+                'Service': '../services',
+                'Controller': '../controllers',
+                'Directive': '../directives'
             }
         },
         deps: testFiles,

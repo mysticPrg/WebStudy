@@ -2,7 +2,7 @@
  * Created by mysticprg on 15. 1. 9.
  */
 
-requirejs.config({
+require.config({
     baseUrl: 'js',
 
     paths: {
@@ -12,11 +12,7 @@ requirejs.config({
         'angular-aria': '../../bower_components/angular-aria/angular-aria',
         'angular-material': '../../bower_components/angular-material/angular-material',
         'angular-route': '../../bower_components/angular-route/angular-route',
-        'hammer': '../../bower_components/hammerjs/hammer',
-
-        'Service': '../services',
-        'Controller': '../controllers',
-        'Directive': '../directives'
+        'hammer': '../../bower_components/hammerjs/hammer'
     },
 
     shim: {
@@ -34,7 +30,10 @@ requirejs.config({
 
     map: {
         '*': {
-            'css': '../../bower_components/require-css/css'
+            'css': '../../bower_components/require-css/css',
+            'Service': '../services',
+            'Controller': '../controllers',
+            'Directive': '../directives'
         }
     },
 

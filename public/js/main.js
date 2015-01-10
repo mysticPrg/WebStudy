@@ -12,7 +12,8 @@ require.config({
 		'angular-aria': '../../bower_components/angular-aria/angular-aria',
 		'angular-material': '../../bower_components/angular-material/angular-material',
 		'angular-route': '../../bower_components/angular-route/angular-route',
-		'hammer': '../../bower_components/hammerjs/hammer'
+		'hammer': '../../bower_components/hammerjs/hammer',
+		'jquery': '../../bower_components/jquery/dist/jquery'
 	},
 
 	shim: {

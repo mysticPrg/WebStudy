@@ -4,12 +4,12 @@
 
 
 define(['angular', 'jquery', 'app', 'Service/version', 'Resource/User'], function (ng, $, app) {
-	app.controller('homeCtrl', function ($scope, version, User) {
+	app.controller('homeCtrl', ['$scope', 'version', 'User', function ($scope, version, User) {
 		$scope.version = version;
 
 		$scope.join = function () {
 
-			if ( Object.keys($scope.userForm.$error).length !== 0 ) {
+			if (Object.keys($scope.userForm.$error).length !== 0) {
 				return;
 			}
 
@@ -45,5 +45,5 @@ define(['angular', 'jquery', 'app', 'Service/version', 'Resource/User'], functio
 				$scope.users[users[i].id] = users[i];
 			}
 		});
-	});
+	}]);
 });

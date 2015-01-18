@@ -46,7 +46,7 @@ define([
 	window.Hammer = hammer;
 	var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute', 'ngResource']);
 
-	app.config(function ($routeProvider, $mdThemingProvider) {
+	app.config(function ($routeProvider, $mdThemingProvider, $compileProvider) {
 
 		$routeProvider
 			.when('/home', angularAMD.route({
@@ -60,10 +60,14 @@ define([
 
 		$mdThemingProvider.theme('default')
 			.primaryColor('blue')
-			.accentColor('orange');
+			.accentColor('purple');
+
+		$compileProvider.debugInfoEnabled(false);
 	});
 
 	setHeadDirecrive(app);
 
-	return angularAMD.bootstrap(app);
+	return angularAMD.bootstrap(app, {
+		strictDi: true
+	});
 });

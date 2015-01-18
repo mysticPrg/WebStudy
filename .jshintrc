@@ -34,6 +34,7 @@
     "document": true,
     "angular": true,
     "alert": true,
-    "$": true
+    "$": true,
+    "inject": true
   }
 }

@@ -30,7 +30,8 @@ require.config({
 			'angular-animate',
 			'angular-aria',
 			'hammer',
-			'css!../../bower_components/angular-material/angular-material.min'
+			'css!../../bower_components/angular-material/angular-material.min',
+			'css!../../bower_components/angular-material/default-theme'
 		]
 	},
 

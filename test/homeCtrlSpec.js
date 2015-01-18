@@ -2,23 +2,40 @@
  * Created by mysticprg on 15. 1. 9.
  */
 
-define(['Controller/homeCtrl', 'Service/version', 'angular-mocks'], function (homeCtrl) {
+define([
+	'Controller/homeCtrl',
+	'Service/version',
+	'angular-mocks'
+], function () {
 	describe('variety test', function () {
 
 		beforeEach(module('WebStudySampleApp'));
 
-		it('controller test', inject(function ($controller) {
-			var scope = {};
-			homeCtrl = $controller('homeCtrl', {$scope: scope});
+		var $controller;
 
-			expect(scope.version).toBe(0.1);
+		beforeEach(inject(function(_$controller_) {
+			$controller = _$controller_;
 		}));
 
-		it('service test', inject(function (version) {
+		//it('controller test', inject(function ($controller) {
+		//	var scope = {};
+		//	$controller('homeCtrl', {$scope: scope});
+		//
+		//	expect(scope.version).toBe(0.1);
+		//}));
 
-			expect(version).toBe(0.1);
+		it('controller test', function () {
+			var $scope = {};
+			$controller('homeCtrl', {$scope: $scope});
 
-		}));
+			expect($scope.version).toBe(0.1);
+		});
+
+		//it('service test', inject(function (version) {
+		//
+		//	expect(version).toBe(0.1);
+		//
+		//}));
 
 	});
 });

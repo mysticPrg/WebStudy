@@ -1,41 +1,57 @@
-<p>this is home, Version : {{version}}</p>
+<md-toolbar>
+	<p>This is home, Version : {{version}}</p>
 
-<md-card>
-	<ul>
-		<li ng-repeat="user in users">
-			{{user.id}} : {{user.name}}
-			<md-button ng-click="unjoin(user);">Unjoin</md-button>
-			<md-button ng-click="modify(user);">Modify</md-button>
-		</li>
-	</ul>
-</md-card>
+	<p>This area is toolbar</p>
+</md-toolbar>
 
-<md-card>
-	<form name="userForm">
-		<md-input-container>
-			<label>id</label>
-			<input type="text" ng-model="userid" name="userid" required ng-focus="">
-		</md-input-container>
+<md-content style="height: 500px">
+	<md-card>
+		<md-toolbar class="md-accent">
+			This is Header
+		</md-toolbar>
+		<md-list>
+			<md-item ng-repeat="user in users">
+				<md-item-content>
+					<div class="md-tile-content">
+						{{user.id}} : {{user.name}}
+					</div>
+					<div class="md-tile-right">
+						<md-button class="md-whiteframe-z1 md-accent" ng-click="unjoin(user);">Unjoin</md-button>
+						<md-button class="md-whiteframe-z1 md-accent" ng-click="modify(user);">Modify</md-button>
+					</div>
+				</md-item-content>
+				<md-divider ng-if="!$last"></md-divider>
+			</md-item>
+		</md-list>
+	</md-card>
 
-		<md-input-container>
-			<label>name</label>
-			<input type="text" ng-model="username" name="username" required>
-		</md-input-container>
+	<md-card>
+		<form name="userForm">
+			<md-input-container>
+				<label>id</label>
+				<input type="text" ng-model="userid" name="userid" required ng-focus="">
+			</md-input-container>
 
-		<!--<md-card ng-show="userForm.userid.$error.required || userForm.username.$error.required">Required!</md-card>-->
-		<md-button ng-click="join();">send</md-button>
-	</form>
-</md-card>
+			<md-input-container>
+				<label>name</label>
+				<input type="text" ng-model="username" name="username" required>
+			</md-input-container>
 
-<md-card>
-	<p>Selected Value: <span class="radioValue">{{ data.group1 }}</span></p>
-	<md-radio-group ng-model="data.group1">
-		<md-radio-button value="Apple" aria-label="Label 1">Apple</md-radio-button>
-		<md-radio-button value="Banana"> Banana</md-radio-button>
-		<md-radio-button value="Mango" aria-label="Label 3">Mango</md-radio-button>
-	</md-radio-group>
-</md-card>
+			<!--<md-card ng-show="userForm.userid.$error.required || userForm.username.$error.required">Required!</md-card>-->
+			<md-button ng-click="join();">send</md-button>
+		</form>
+	</md-card>
 
-<md-card>
-	<md-progress-linear md-mode="indeterminate"></md-progress-linear>
-</md-card>
+	<md-card>
+		<p>Selected Value: <span class="radioValue">{{ data.group1 }}</span></p>
+		<md-radio-group ng-model="data.group1">
+			<md-radio-button value="Apple" aria-label="Label 1">Apple</md-radio-button>
+			<md-radio-button value="Banana"> Banana</md-radio-button>
+			<md-radio-button value="Mango" aria-label="Label 3">Mango</md-radio-button>
+		</md-radio-group>
+	</md-card>
+
+	<md-card>
+		<md-progress-linear md-mode="indeterminate"></md-progress-linear>
+	</md-card>
+</md-content>

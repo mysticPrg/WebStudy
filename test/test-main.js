@@ -30,22 +30,31 @@
 			'angular-aria': '../../bower_components/angular-aria/angular-aria',
 			'angular-material': '../../bower_components/angular-material/angular-material',
 			'angular-route': '../../bower_components/angular-route/angular-route',
-			'angular-mocks': '../../bower_components/angular-mocks/angular-mocks',
-			'hammer': '../../bower_components/hammerjs/hammer'
+			'angular-resource': '../../bower_components/angular-resource/angular-resource',
+			'hammer': '../../bower_components/hammerjs/hammer',
+			'jquery': '../../bower_components/jquery/dist/jquery',
+
+			'angular-mocks': '../../bower_components/angular-mocks/angular-mocks'
 		},
 
 		shim: {
+			'angular': {
+				'exports': 'angular'
+			},
 			'angularAMD': ['angular'],
 			'angular-animate': ['angular'],
 			'angular-aria': ['angular'],
-			'angular-mocks': ['angular'],
+			'angular-route': ['angular'],
+			'angular-resource': ['angular'],
 			'angular-material': [
 				'angular-animate',
 				'angular-aria',
 				'hammer',
-				'css!../../bower_components/angular-material/angular-material.min'
+				'css!../../bower_components/angular-material/angular-material.min',
+				'css!../../bower_components/angular-material/default-theme'
 			],
-			'angular-route': ['angular']
+
+			'angular-mocks': ['angular']
 		},
 
 		map: {
@@ -53,11 +62,14 @@
 				'css': '../../bower_components/require-css/css',
 				'Service': '../services',
 				'Controller': '../controllers',
-				'Directive': '../directives'
+				'Directive': '../directives',
+				'Resource': '../resources',
+				'Filter': '../filters'
 			}
 		},
+
 		deps: testFiles,
 
-		callback: window.__karma__.start,
+		callback: window.__karma__.start
 	});
 }();

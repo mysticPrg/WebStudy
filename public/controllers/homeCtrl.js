@@ -3,7 +3,7 @@
  */
 
 
-define(['jquery', 'app', 'Service/version', 'Resource/User'], function ($, app) {
+define(['angular', 'jquery', 'app', 'Service/version', 'Resource/User'], function (ng, $, app) {
 	app.controller('homeCtrl', function ($scope, version, User) {
 		$scope.version = version;
 
@@ -22,6 +22,8 @@ define(['jquery', 'app', 'Service/version', 'Resource/User'], function ($, app) 
 				$scope.users[newUser.id] = newUser;
 				$scope.userid = '';
 				$scope.username = '';
+
+				$('input[name="userid"]').focus();
 			});
 		};
 
@@ -36,12 +38,12 @@ define(['jquery', 'app', 'Service/version', 'Resource/User'], function ($, app) 
 			user.$modify();
 		};
 
-		//User.query(function (users) {
-		//	$scope.users = {};
-		//	var i;
-		//	for (i = 0; i < users.length; i++) {
-		//		$scope.users[users[i].id] = users[i];
-		//	}
-		//});
+		User.query(function (users) {
+			$scope.users = {};
+			var i;
+			for (i = 0; i < users.length; i++) {
+				$scope.users[users[i].id] = users[i];
+			}
+		});
 	});
 });

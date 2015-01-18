@@ -1,4 +1,4 @@
-body {
-    margin: 100px;
-    padding: 100px;
+md-card {
+    width: 500px;
+    margin: auto;
 }

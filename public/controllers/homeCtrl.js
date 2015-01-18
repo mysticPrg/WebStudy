@@ -36,12 +36,12 @@ define(['jquery', 'app', 'Service/version', 'Resource/User'], function ($, app) 
 			user.$modify();
 		};
 
-		User.query(function (users) {
-			$scope.users = {};
-			var i;
-			for (i = 0; i < users.length; i++) {
-				$scope.users[users[i].id] = users[i];
-			}
-		});
+		//User.query(function (users) {
+		//	$scope.users = {};
+		//	var i;
+		//	for (i = 0; i < users.length; i++) {
+		//		$scope.users[users[i].id] = users[i];
+		//	}
+		//});
 	});
 });

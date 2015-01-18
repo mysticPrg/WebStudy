@@ -18,6 +18,9 @@ require.config({
 	},
 
 	shim: {
+		'angular': {
+			'exports': 'angular'
+		},
 		'angularAMD': ['angular'],
 		'angular-animate': ['angular'],
 		'angular-aria': ['angular'],

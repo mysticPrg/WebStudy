@@ -60,8 +60,8 @@ define([
 			.otherwise('/home');
 
 		$mdThemingProvider.theme('default')
-			.primaryColor('blue')
-			.accentColor('purple');
+			.primaryColor('cyan')
+			.accentColor('yellow');
 
 		$compileProvider.debugInfoEnabled(false);
 	});

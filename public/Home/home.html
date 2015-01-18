@@ -4,7 +4,7 @@
 	<p>This area is toolbar</p>
 </md-toolbar>
 
-<md-content style="height: 500px">
+<md-content>
 	<md-card>
 		<md-toolbar class="md-accent">
 			This is Header
@@ -16,8 +16,8 @@
 						{{user.id}} : {{user.name}}
 					</div>
 					<div class="md-tile-right">
-						<md-button class="md-whiteframe-z1 md-accent" ng-click="unjoin(user);">Unjoin</md-button>
-						<md-button class="md-whiteframe-z1 md-accent" ng-click="modify(user);">Modify</md-button>
+						<md-button class="md-raised md-accent" ng-click="unjoin(user);">Unjoin</md-button>
+						<md-button class="md-raised md-accent" ng-click="modify(user);">Modify</md-button>
 					</div>
 				</md-item-content>
 				<md-divider ng-if="!$last"></md-divider>
@@ -26,7 +26,7 @@
 	</md-card>
 
 	<md-card>
-		<form name="userForm">
+		<form name="userForm" layout="column">
 			<md-input-container>
 				<label>id</label>
 				<input type="text" ng-model="userid" name="userid" focus-on="userid" required ng-focus="">
@@ -37,8 +37,7 @@
 				<input type="text" ng-model="username" name="username" required>
 			</md-input-container>
 
-			<!--<md-card ng-show="userForm.userid.$error.required || userForm.username.$error.required">Required!</md-card>-->
-			<md-button ng-click="join();">send</md-button>
+			<md-button class="md-raised md-accent" ng-click="join();">send</md-button>
 		</form>
 	</md-card>
 

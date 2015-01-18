@@ -6,13 +6,14 @@ define([
 	'angularAMD',
 	'hammer',
 	'angular-route',
-	'angular-material'
+	'angular-material',
+	'angular-resource'
 ], function (angularAMD, hammer) {
 
 	window.Hammer = hammer;
-	var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute']);
+	var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute', 'ngResource']);
 
-	app.config(function ($routeProvider) {
+	app.config(function ($routeProvider, $mdThemingProvider) {
 
 		$routeProvider
 			.when('/home', angularAMD.route({
@@ -23,9 +24,9 @@ define([
 
 			.otherwise('/home');
 
-		//$mdThemingProvider.theme('default')
-		//    .primaryColor('blue')
-		//    .accentColor('orange');
+		$mdThemingProvider.theme('default')
+		    .primaryColor('blue')
+		    .accentColor('orange');
 	});
 
 	return angularAMD.bootstrap(app);

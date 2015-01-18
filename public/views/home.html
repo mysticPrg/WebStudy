@@ -1,6 +1,29 @@
 <md-content>
 	<p>this is home, Version : {{version}}</p>
 
+	<ul>
+		<li ng-repeat="user in users">
+			{{user.id}} : {{user.name}}
+			<md-button ng-click="unjoin(user);">Unjoin</md-button>
+			<md-button ng-click="modify(user);">Modify</md-button>
+		</li>
+	</ul>
+
+	<form name="userForm">
+		<md-input-container>
+			<label>id</label>
+			<input type="text" ng-model="userid" name="userid" required>
+		</md-input-container>
+
+		<md-input-container>
+			<label>name</label>
+			<input type="text" ng-model="username" name="username" required>
+		</md-input-container>
+
+		<!--<md-card ng-show="userForm.userid.$error.required || userForm.username.$error.required">Required!</md-card>-->
+		<md-button ng-click="join();">send</md-button>
+	</form>
+
 	<p>Selected Value: <span class="radioValue">{{ data.group1 }}</span></p>
 	<md-radio-group ng-model="data.group1">
 		<md-radio-button value="Apple" aria-label="Label 1">Apple</md-radio-button>

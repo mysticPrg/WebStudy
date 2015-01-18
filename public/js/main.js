@@ -12,6 +12,7 @@ require.config({
 		'angular-aria': '../../bower_components/angular-aria/angular-aria',
 		'angular-material': '../../bower_components/angular-material/angular-material',
 		'angular-route': '../../bower_components/angular-route/angular-route',
+		'angular-resource': '../../bower_components/angular-resource/angular-resource',
 		'hammer': '../../bower_components/hammerjs/hammer',
 		'jquery': '../../bower_components/jquery/dist/jquery'
 	},
@@ -20,13 +21,14 @@ require.config({
 		'angularAMD': ['angular'],
 		'angular-animate': ['angular'],
 		'angular-aria': ['angular'],
+		'angular-route': ['angular'],
+		'angular-resource': ['angular'],
 		'angular-material': [
 			'angular-animate',
 			'angular-aria',
 			'hammer',
 			'css!../../bower_components/angular-material/angular-material.min'
-		],
-		'angular-route': ['angular']
+		]
 	},
 
 	map: {
@@ -34,7 +36,9 @@ require.config({
 			'css': '../../bower_components/require-css/css',
 			'Service': '../services',
 			'Controller': '../controllers',
-			'Directive': '../directives'
+			'Directive': '../directives',
+			'Resource': '../resources',
+			'Filter': '../filters'
 		}
 	},
 

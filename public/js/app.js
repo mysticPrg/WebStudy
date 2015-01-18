@@ -7,7 +7,8 @@ define([
 	'hammer',
 	'angular-route',
 	'angular-material',
-	'angular-resource'
+	'angular-resource',
+	'angular-focus'
 ], function (angularAMD, hammer) {
 
 	function setHeadDirecrive(app) {
@@ -44,7 +45,7 @@ define([
 	}
 
 	window.Hammer = hammer;
-	var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute', 'ngResource']);
+	var app = angular.module('WebStudySampleApp', ['ngMaterial', 'ngRoute', 'ngResource', 'focusOn']);
 
 	app.config(function ($routeProvider, $mdThemingProvider, $compileProvider) {
 
@@ -67,7 +68,5 @@ define([
 
 	setHeadDirecrive(app);
 
-	return angularAMD.bootstrap(app, {
-		strictDi: true
-	});
+	return angularAMD.bootstrap(app);
 });

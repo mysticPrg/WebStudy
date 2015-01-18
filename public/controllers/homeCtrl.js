@@ -3,8 +3,9 @@
  */
 
 
-define(['angular', 'jquery', 'app', 'Service/version', 'Resource/User'], function (ng, $, app) {
-	app.controller('homeCtrl', ['$scope', 'version', 'User', function ($scope, version, User) {
+define(['angular', 'app', 'Service/version', 'Resource/User'], function (ng, app) {
+
+	app.controller('homeCtrl', ['$scope', 'version', 'User', 'focus', function ($scope, version, User, focus) {
 		$scope.version = version;
 
 		$scope.join = function () {
@@ -23,7 +24,9 @@ define(['angular', 'jquery', 'app', 'Service/version', 'Resource/User'], functio
 				$scope.userid = '';
 				$scope.username = '';
 
-				$('input[name="userid"]').focus();
+				//$('input[name="userid"]').focus();
+				//ng.element('#userid').focus();
+				focus('userid');
 			});
 		};
 

@@ -13,8 +13,8 @@ require.config({
 		'angular-material': '../../bower_components/angular-material/angular-material',
 		'angular-route': '../../bower_components/angular-route/angular-route',
 		'angular-resource': '../../bower_components/angular-resource/angular-resource',
-		'hammer': '../../bower_components/hammerjs/hammer',
-		'jquery': '../../bower_components/jquery/dist/jquery'
+		'angular-focus': '../../bower_components/ng-focus-on/ng-focus-on',
+		'hammer': '../../bower_components/hammerjs/hammer'
 	},
 
 	shim: {
@@ -26,6 +26,7 @@ require.config({
 		'angular-aria': ['angular'],
 		'angular-route': ['angular'],
 		'angular-resource': ['angular'],
+		'angular-focus': ['angular'],
 		'angular-material': [
 			'angular-animate',
 			'angular-aria',

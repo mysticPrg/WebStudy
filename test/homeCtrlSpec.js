@@ -7,6 +7,7 @@ define([
 	'Service/version',
 	'angular-mocks'
 ], function () {
+
 	describe('variety test', function () {
 
 		beforeEach(module('WebStudySampleApp'));
@@ -17,13 +18,6 @@ define([
 			$controller = _$controller_;
 		}));
 
-		//it('controller test', inject(function ($controller) {
-		//	var scope = {};
-		//	$controller('homeCtrl', {$scope: scope});
-		//
-		//	expect(scope.version).toBe(0.1);
-		//}));
-
 		it('controller test', function () {
 			var $scope = {};
 			$controller('homeCtrl', {$scope: $scope});
@@ -31,11 +25,9 @@ define([
 			expect($scope.version).toBe(0.1);
 		});
 
-		//it('service test', inject(function (version) {
-		//
-		//	expect(version).toBe(0.1);
-		//
-		//}));
+		it('service test', inject(function(version) {
+			expect(version).toBe(0.1);
+		}));
 
 	});
 });

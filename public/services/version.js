@@ -3,8 +3,8 @@
  */
 
 define(['app'], function (app) {
-	app.factory('version', function () {
 
+	app.factory('version', function () {
 		return 0.1;
 	});
 });

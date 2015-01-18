@@ -31,8 +31,8 @@
 			'angular-material': '../../bower_components/angular-material/angular-material',
 			'angular-route': '../../bower_components/angular-route/angular-route',
 			'angular-resource': '../../bower_components/angular-resource/angular-resource',
+			'angular-focus': '../../bower_components/ng-focus-on/ng-focus-on',
 			'hammer': '../../bower_components/hammerjs/hammer',
-			'jquery': '../../bower_components/jquery/dist/jquery',
 
 			'angular-mocks': '../../bower_components/angular-mocks/angular-mocks'
 		},
@@ -46,6 +46,7 @@
 			'angular-aria': ['angular'],
 			'angular-route': ['angular'],
 			'angular-resource': ['angular'],
+			'angular-focus': ['angular'],
 			'angular-material': [
 				'angular-animate',
 				'angular-aria',
@@ -65,7 +66,12 @@
 				'Directive': '../directives',
 				'Resource': '../resources',
 				'Filter': '../filters'
+				//'jquery': 'jquery-private'
 			}
+
+			//'jquery-private': {
+			//	'jquery': 'jquery'
+			//}
 		},
 
 		deps: testFiles,

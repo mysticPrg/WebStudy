@@ -3,7 +3,7 @@
  */
 
 
-define(['angular', 'app', 'Service/version', 'Resource/User'], function (ng, app) {
+define(['app', 'Service/version', 'Resource/User'], function (app) {
 
 	app.controller('homeCtrl', ['$scope', 'version', 'User', 'focus', function ($scope, version, User, focus) {
 		$scope.version = version;
@@ -24,8 +24,6 @@ define(['angular', 'app', 'Service/version', 'Resource/User'], function (ng, app
 				$scope.userid = '';
 				$scope.username = '';
 
-				//$('input[name="userid"]').focus();
-				//ng.element('#userid').focus();
 				focus('userid');
 			});
 		};

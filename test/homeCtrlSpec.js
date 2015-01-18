@@ -3,7 +3,7 @@
  */
 
 define([
-	'Controller/homeCtrl',
+	'Home/homeCtrl',
 	'Service/version',
 	'angular-mocks'
 ], function () {

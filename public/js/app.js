@@ -51,10 +51,10 @@ define([
 
 		$routeProvider
 			.when('/home', angularAMD.route({
-				templateUrl: 'views/home.html',
-				css: 'styles/home.css',
+				templateUrl: 'Home/home.html',
+				css: 'Home/home.css',
 				controller: 'homeCtrl',
-				controllerUrl: 'Controller/homeCtrl'
+				controllerUrl: 'Home/homeCtrl'
 			}))
 
 			.otherwise('/home');

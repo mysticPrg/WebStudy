@@ -62,16 +62,12 @@
 			'*': {
 				'css': '../../bower_components/require-css/css',
 				'Service': '../services',
-				'Controller': '../controllers',
-				'Directive': '../directives',
 				'Resource': '../resources',
-				'Filter': '../filters'
-				//'jquery': 'jquery-private'
-			}
+				'Filter': '../filters',
 
-			//'jquery-private': {
-			//	'jquery': 'jquery'
-			//}
+				// Pages
+				'Home' :'../Home'
+			}
 		},
 
 		deps: testFiles,

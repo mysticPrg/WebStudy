@@ -40,10 +40,11 @@ require.config({
 		'*': {
 			'css': '../../bower_components/require-css/css',
 			'Service': '../services',
-			'Controller': '../controllers',
-			'Directive': '../directives',
 			'Resource': '../resources',
-			'Filter': '../filters'
+			'Filter': '../filters',
+
+			// Pages
+			'Home' :'../Home'
 		}
 	},
 

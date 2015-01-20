@@ -8,6 +8,7 @@ define(['app'], function (app) {
 
 		var imgUrl = 'Main/imgs/';
 
+		$scope.selected = 1;
 		$scope.contents = [
 			{
 				id: 0,

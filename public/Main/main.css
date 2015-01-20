@@ -3,10 +3,27 @@
     background-color: #cacaca;
 }
 
-#main-contents {
+.main-contents {
     width: 350px;
     height: 500px;
     background-color: #ffffff;
+}
+
+.main-contents > img {
+    width: 340px;
+    height: 420px;
+}
+
+.main-contents > md-card-content {
+    height: 55px;
+}
+
+.main-contents > md-card-content > .md-subheader {
+    padding: 10px;
+}
+
+.main-contents > md-card-content > span {
+    font-size: 12px;
 }
 
 #main-bottom {

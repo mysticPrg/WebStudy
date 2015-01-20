@@ -22,7 +22,7 @@
 
 	</section>
 
-	<div id="main-qrcode">
+	<div class="main-connect" ng-show="!connected" ng-click="toggleConnect();">
 		<img ng-src="{{qrcode}}">
 
 		<p>
@@ -33,7 +33,37 @@
 		</p>
 	</div>
 
-	<section id="main-bottom" layout="row" layout-align="space-between center">
+	<div class="main-connect connected" ng-show="connected" ng-click="toggleConnect();">
+		<img src="Main/imgs/connected.png">
+
+		<p>
+			<b>
+				연결되었습니다!
+			</b>
+		</p>
+	</div>
+
+	<section id="main-bottom" layout="column" layout-align="center center">
+
+		<div id="main-bottom-cursor">
+			▼
+		</div>
+
+		<md-list layout="row">
+			<md-item ng-repeat="c in contents">
+				<md-item-content class="main-thumb" layout="column" layout-align="center center">
+					<img ng-src="{{c.thumb}}">
+				</md-item-content>
+			</md-item>
+			<md-item-content class="main-thumb main-bottom-selected md-whiteframe-z3" layout="column" layout-align="center center">
+				<img ng-src="{{contents[1].thumb}}">
+			</md-item-content>
+			<md-item ng-repeat="c in contents">
+				<md-item-content class="main-thumb" layout="column" layout-align="center center">
+					<img ng-src="{{c.thumb}}">
+				</md-item-content>
+			</md-item>
+		</md-list>
 	</section>
 
 </md-content>

@@ -8,6 +8,7 @@ define(['app'], function (app) {
 
 		var imgUrl = require.toUrl('Main/imgs/');
 
+		$scope.title = 'Main Page';
 		$scope.qrcode = imgUrl + 'QRCode.gif';
 		$scope.contents = [
 			{

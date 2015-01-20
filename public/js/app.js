@@ -18,9 +18,16 @@ define([
 					restrict: 'E',
 					link: function (scope, elem) {
 						var html = '<link rel="stylesheet" ng-repeat="(routeCtrl, cssUrl) in routeStyles" ng-href="{{cssUrl}}" />';
+						html += '<title>DynamicDisplay: {{title}}</title>';
+
 						elem.append($compile(html)(scope));
 						scope.routeStyles = {};
 						$rootScope.$on('$routeChangeStart', function (e, next, current) {
+							// add Title
+							if ( next && next.$$route && next.$$route.title ) {
+								scope.title = next.$$route.title;
+							}
+
 							if (current && current.$$route && current.$$route.css) {
 								if (!angular.isArray(current.$$route.css)) {
 									current.$$route.css = [current.$$route.css];
@@ -54,13 +61,15 @@ define([
 				templateUrl: 'Home/home.html',
 				css: 'Home/home.css',
 				controller: 'homeCtrl',
-				controllerUrl: 'Home/homeCtrl'
+				controllerUrl: 'Home/homeCtrl',
+				title: 'Home Page'
 			}))
 			.when('/main', angularAMD.route({
 				templateUrl: 'Main/main.html',
 				css: ['Main/main.css'],
 				controller: 'mainCtrl',
-				controllerUrl: 'Main/mainCtrl'
+				controllerUrl: 'Main/mainCtrl',
+				title: 'Main Page'
 			}))
 
 			.otherwise('/main');

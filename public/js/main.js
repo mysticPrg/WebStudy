@@ -34,6 +34,7 @@ require.config({
 			'css!../../bower_components/angular-material/angular-material.min',
 			'css!../../bower_components/angular-material/default-theme'
 		]
+	},
 
 	map: {
 		'*': {
@@ -44,7 +45,7 @@ require.config({
 			'Directive': '../Common/directives',
 
 			// Pages
-			'Home' :'../Home',
+			'Home': '../Home',
 			'Main': '../Main',
 			'Detail': '../Detail'
 		}

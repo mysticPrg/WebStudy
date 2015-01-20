@@ -6,9 +6,9 @@ define(['app'], function (app) {
 
 	app.controller('mainCtrl', ['$scope', function ($scope) {
 
-		var imgUrl = 'Main/imgs/';
+		var imgUrl = require.toUrl('Main/imgs/');
 
-		$scope.selected = 1;
+		$scope.qrcode = imgUrl + 'QRCode.gif';
 		$scope.contents = [
 			{
 				id: 0,

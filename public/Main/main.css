@@ -1,6 +1,8 @@
 
 #main-screen {
-    background-color: #cacaca;
+    /*background-color: #cacaca;*/
+    /*background-image: url("imgs/bg.png");*/
+    background: radial-gradient(ellipse at center, rgba(221,221,221,1) 0%,rgba(147,147,147,1) 100%); /* W3C */
 }
 
 .main-contents {
@@ -27,5 +29,29 @@
 }
 
 #main-bottom {
-    height: 250px;
+    height: 200px;
+}
+
+#main-qrcode {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ffffff;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+}
+
+#main-qrcode > p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+#main-qrcode > img {
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 100px;
+    position: relative;
 }

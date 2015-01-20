@@ -1,21 +1,39 @@
-
 <md-content id="main-wrapper" layout="column" layout-fill>
-	<section id="main-screen" flex layout="row" layout-padding layout-align="center center">
+	<section id="main-screen" flex layout="row" layout-padding layout-align="space-between center">
 
-			<md-card class="main-contents md-whiteframe-z2" layout layout-margin ng-repeat="c in contents" layout-align="center center">
+		<md-button class="md-fab md-raised md-primary">
+			<span><b>&lt;</b></span>
+		</md-button>
 
-				<img ng-src="{{c.img}}">
+		<md-card class="main-contents md-whiteframe-z2" layout layout-margin ng-repeat="c in contents"
+				 layout-align="center center">
 
-				<md-card-content layout="row" layout-align="center center">
-					<md-subheader flex>{{c.title}}</md-subheader>
-					<span flex="70">{{c.desc}}</span>
-				</md-card-content>
-			</md-card>
+			<img ng-src="{{c.img}}">
+
+			<md-card-content layout="row" layout-align="center center">
+				<md-subheader flex>{{c.title}}</md-subheader>
+				<span flex="70">{{c.desc}}</span>
+			</md-card-content>
+		</md-card>
+
+		<md-button class="md-fab md-raised md-primary">
+			<span><b>&gt;</b></span>
+		</md-button>
 
 	</section>
 
-	<section id="main-bottom" layout layout-align="center center">
-		<span>Bottom Area</span>
+	<div id="main-qrcode">
+		<img ng-src="{{qrcode}}">
+
+		<p>
+			<b>
+				QR코드를 찍어서 연결하세요<br>
+				http://dynamicDisplay.com/xAw45
+			</b>
+		</p>
+	</div>
+
+	<section id="main-bottom" layout="row" layout-align="space-between center">
 	</section>
 
 </md-content>

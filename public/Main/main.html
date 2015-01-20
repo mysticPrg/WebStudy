@@ -1,0 +1,21 @@
+
+<md-content id="main-wrapper" layout="column" layout-fill>
+	<section id="main-screen" flex layout="row" layout-padding layout-align="center center">
+
+			<md-card id="main-contents" class="md-whiteframe-z2" layout layout-margin ng-repeat="c in contents">
+
+				<img ng-src="{{c.img}}">
+
+				<md-card-content layout layout-align="center center">
+					<md-subheader>{{c.title}}</md-subheader>
+					{{c.desc}}
+				</md-card-content>
+			</md-card>
+
+	</section>
+
+	<section id="main-bottom" layout layout-align="center center">
+		<span>Bottom Area</span>
+	</section>
+
+</md-content>

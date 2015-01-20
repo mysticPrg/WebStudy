@@ -3,10 +3,17 @@
 	<head lang="kr">
 		<meta charset="UTF-8">
 		<title>WebStudy</title>
+
+		<style>
+			[ng-view] {
+				height: 100%;
+			}
+		</style>
 	</head>
 
 	<body>
-		<md-content ng-view></md-content>
+		<md-content ng-view layout-fill>
+		</md-content>
 
 		<script src="../bower_components/requirejs/require.js" data-main="js/main.js"></script>
 	</body>

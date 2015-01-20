@@ -1,0 +1,14 @@
+
+#main-screen {
+    background-color: #cacaca;
+}
+
+#main-contents {
+    width: 350px;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+#main-bottom {
+    height: 250px;
+}

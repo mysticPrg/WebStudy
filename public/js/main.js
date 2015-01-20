@@ -44,7 +44,8 @@ require.config({
 			'Filter': '../filters',
 
 			// Pages
-			'Home' :'../Home'
+			'Home' :'../Home',
+			'Main': '../Main'
 		}
 	},
 

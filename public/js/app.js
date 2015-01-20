@@ -56,8 +56,14 @@ define([
 				controller: 'homeCtrl',
 				controllerUrl: 'Home/homeCtrl'
 			}))
+			.when('/main', angularAMD.route({
+				templateUrl: 'Main/main.html',
+				css: ['Main/main.css'],
+				controller: 'mainCtrl',
+				controllerUrl: 'Main/mainCtrl'
+			}))
 
-			.otherwise('/home');
+			.otherwise('/main');
 
 		$mdThemingProvider.theme('default')
 			.primaryColor('cyan')

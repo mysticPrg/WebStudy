@@ -10,6 +10,7 @@ define(['app'], function (app) {
 
 		$scope.title = 'Main Page';
 		$scope.qrcode = imgUrl + 'QRCode.gif';
+		$scope.url = 'xAw45';
 		$scope.connected = false;
 		$scope.contents = [
 			{

@@ -39,9 +39,10 @@ require.config({
 	map: {
 		'*': {
 			'css': '../../bower_components/require-css/css',
-			'Service': '../services',
-			'Resource': '../resources',
-			'Filter': '../filters',
+			'Service': '../Common/services',
+			'Resource': '../Common/resources',
+			'Filter': '../Common/filters',
+			'Directive': '../Common/directives',
 
 			// Pages
 			'Home' :'../Home',

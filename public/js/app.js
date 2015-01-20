@@ -24,7 +24,7 @@ define([
 						scope.routeStyles = {};
 						$rootScope.$on('$routeChangeStart', function (e, next, current) {
 							// add Title
-							if ( next && next.$$route && next.$$route.title ) {
+							if (next && next.$$route && next.$$route.title) {
 								scope.title = next.$$route.title;
 							}
 
@@ -59,7 +59,7 @@ define([
 		$routeProvider
 			.when('/home', angularAMD.route({
 				templateUrl: 'Home/home.html',
-				css: 'Home/home.css',
+				css: ['Home/home.css'],
 				controller: 'homeCtrl',
 				controllerUrl: 'Home/homeCtrl',
 				title: 'Home Page'
@@ -71,7 +71,13 @@ define([
 				controllerUrl: 'Main/mainCtrl',
 				title: 'Main Page'
 			}))
-
+			.when('/detail', angularAMD.route({
+				templateUrl: 'Detail/detail.html',
+				css: ['Detail/detail.css'],
+				controller: 'detailCtrl',
+				controllerUrl: 'Detail/detailCtrl',
+				title: 'Detail Page'
+			}))
 			.otherwise('/main');
 
 		// Pick [ red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey ]

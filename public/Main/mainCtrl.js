@@ -23,7 +23,7 @@ define(['app'], function (app) {
 				id: 1,
 				img: imgUrl + 'batman.jpg',
 				thumb: imgUrl + 'batman-thumb.jpg',
-				title: 'Batman: The Dark Knight',
+				title: 'Batman The Dark Knight',
 				desc: '조커의 인상적인 연기가 돋보이는 영화'
 			},
 			{
@@ -31,7 +31,7 @@ define(['app'], function (app) {
 				img: imgUrl + 'market.jpg',
 				thumb: imgUrl + 'market-thumb.jpg',
 				title: '국제시장',
-				desc: '부산 국제시장을 무대로 세월을 넘나드는 황정민의 연기'
+				desc: '그때 그 시절, 굳세게 살아온 우리들의 이야기'
 			}
 		];
 

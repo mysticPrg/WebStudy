@@ -6,6 +6,7 @@ require.config({
 	baseUrl: 'js',
 
 	paths: {
+		'jquery': '../../bower_components/jquery/dist/jquery',
 		'angular': '../../bower_components/angular/angular',
 		'angularAMD': '../../bower_components/angularAMD/angularAMD',
 		'angular-animate': '../../bower_components/angular-animate/angular-animate',
@@ -14,12 +15,15 @@ require.config({
 		'angular-route': '../../bower_components/angular-route/angular-route',
 		'angular-resource': '../../bower_components/angular-resource/angular-resource',
 		'angular-focus': '../../bower_components/ng-focus-on/ng-focus-on',
-		'hammer': '../../bower_components/hammerjs/hammer'
+		'hammer': '../../bower_components/hammerjs/hammer',
+
+		'common': '../Common/common'
 	},
 
 	shim: {
 		'angular': {
-			'exports': 'angular'
+			'exports': 'angular',
+			'deps': ['jquery']
 		},
 		'angularAMD': ['angular'],
 		'angular-animate': ['angular'],
@@ -33,7 +37,10 @@ require.config({
 			'hammer',
 			'css!../../bower_components/angular-material/angular-material.min',
 			'css!../../bower_components/angular-material/default-theme'
-		]
+		],
+		'hammer': {
+			'exports': 'hammer'
+		}
 	},
 
 	map: {

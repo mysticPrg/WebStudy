@@ -1,0 +1,32 @@
+#full-contents {
+    height: 100%;
+
+    background-image: url("imgs/batman.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: 0%;
+
+    overflow-y: hidden;
+}
+
+#detail_wrap {
+    min-height: 5000px;
+}
+
+#detail_tint {
+    z-index: 1;
+    opacity: 0.5;
+    background-color: #000000;
+    position: absolute;
+    min-height: 5000px;
+
+    display: none;
+}
+
+#detail_contents {
+    z-index: 2;
+    position: absolute;
+    color: #ffffff;
+
+    display: none;
+}

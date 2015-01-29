@@ -51,6 +51,7 @@ require.config({
 			'Filter': '../Common/filters',
 			'Directive': '../Common/directives',
 			'Controller': '../Common/controllers',
+			'Common': '../Common',
 
 			// Pages
 			'Home': '../Home',

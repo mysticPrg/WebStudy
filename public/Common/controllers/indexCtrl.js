@@ -8,5 +8,6 @@ define([
 	'Directive/fadeInLoad'
 ], function (common) {
 	common.controller('indexCtrl', ['$scope', function ($scope) {
+
 	}]);
 });

@@ -2,7 +2,7 @@
  * Created by mysticprg on 15. 1. 21.
  */
 
-define(['app', 'common'], function (app) {
+define(['app'], function (app) {
 
 	app.controller('mainCtrl', ['$scope', '$location', '$route', function ($scope, $location, $route) {
 

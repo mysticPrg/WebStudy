@@ -1,11 +1,7 @@
 /**
- * Created by mysticprg on 15. 1. 23.
+ * Created by mysticprg on 15. 1. 29.
  */
 
-define([
-	'angular'
-], function(angular) {
-	var common = angular.module('Common', []);
-
-	return common;
+define(['angular'], function(angular) {
+	return angular.module('Common', []);
 });

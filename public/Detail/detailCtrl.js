@@ -2,7 +2,7 @@
  * Created by mysticprg on 15. 1. 21.
  */
 
-define(['jquery', 'app', 'common', 'Directive/scrollWatch'], function ($, app) {
+define(['jquery', 'app', 'Directive/scrollWatch'], function ($, app) {
 	app.controller('detailCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
 
 		//var fullElm;

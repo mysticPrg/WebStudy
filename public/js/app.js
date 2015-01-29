@@ -10,6 +10,8 @@ define([
 	'angular-resource',
 	'angular-focus',
 
+	'Directive/head',
+	'Directive/fadeInLoad',
 	'Controller/indexCtrl'
 ], function (angularAMD, hammer) {
 

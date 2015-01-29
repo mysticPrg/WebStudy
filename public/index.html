@@ -2,16 +2,17 @@
 <html>
 	<head lang="kr">
 		<meta charset="UTF-8">
-		<!--<title>DinamicDisplay</title>-->
 
 		<style>
 			[ng-view] {
 				height: 100%;
+				background-color: #000000;
 			}
 		</style>
+		<link rel="stylesheet" type="text/css" href="http://cdn.axisj.com/axicon/axicon.min.css" />
 	</head>
 
-	<body>
+	<body ng-clock>
 
 		<md-content id="full-contents" ng-view layout-fill>
 		</md-content>

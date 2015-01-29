@@ -4,7 +4,7 @@
 
 define(['app', 'common'], function (app) {
 
-	app.controller('mainCtrl', ['$scope', function ($scope) {
+	app.controller('mainCtrl', ['$scope', '$location', '$route', function ($scope, $location, $route) {
 
 		var imgUrl = require.toUrl('Main/imgs/');
 
@@ -36,8 +36,15 @@ define(['app', 'common'], function (app) {
 			}
 		];
 
-		$scope.toggleConnect = function() {
+		$scope.toggleConnect = function () {
 			$scope.connected = !$scope.connected;
+		};
+
+		$scope.goToDetail = function ($index) {
+			$('#main-wrapper').fadeOut('fast', function() {
+				$location.path('detail');
+				$route.reload();
+			});
 		};
 	}]);
 });

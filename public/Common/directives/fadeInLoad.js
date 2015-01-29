@@ -11,7 +11,7 @@ define(['app', 'jquery'], function (app, $) {
 			link: function (scope, elem) {
 
 				function fadeIn() {
-					$(elem).fadeIn();
+					$(elem).fadeIn('fast');
 				}
 
 				$(elem).css('display', 'none');

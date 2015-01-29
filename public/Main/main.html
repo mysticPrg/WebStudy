@@ -1,4 +1,4 @@
-<md-content id="main-wrapper" layout="column" layout-fill fade-in-load>
+<md-content id="main-wrapper" layout="column" layout-fill>
 	<section id="main-screen" flex layout="row" layout-padding layout-align="space-between center">
 
 		<md-button class="md-fab md-raised md-primary">
@@ -6,7 +6,7 @@
 		</md-button>
 
 		<md-card class="main-contents md-whiteframe-z2" layout layout-margin ng-repeat="c in contents"
-				 layout-align="center center">
+				 layout-align="center center" ng-click="goToDetail($index);">
 
 			<img ng-src="{{c.img}}">
 
@@ -55,7 +55,8 @@
 					<img ng-src="{{c.thumb}}">
 				</md-item-content>
 			</md-item>
-			<md-item-content class="main-thumb main-bottom-selected md-whiteframe-z3" layout="column" layout-align="center center">
+			<md-item-content class="main-thumb main-bottom-selected md-whiteframe-z3" layout="column"
+							 layout-align="center center">
 				<img ng-src="{{contents[1].thumb}}">
 			</md-item-content>
 			<md-item ng-repeat="c in contents">

@@ -88,6 +88,13 @@ define([
 				controllerUrl: 'Admin/Login/loginCtrl',
 				title: 'Login'
 			}))
+			.when('/admin/join', angularAMD.route({
+				templateUrl: 'Admin/Join/join.html',
+				css: ['Admin/Join/join.css'],
+				controller: 'joinCtrl',
+				controllerUrl: 'Admin/Join/joinCtrl',
+				title: 'Join'
+			}))
 
 			// Otherwise
 			.otherwise('/main');

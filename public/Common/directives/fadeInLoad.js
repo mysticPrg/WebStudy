@@ -2,9 +2,9 @@
  * Created by mysticprg on 15. 1. 23.
  */
 
-define(['app', 'jquery'], function (app, $) {
+define(['jquery', 'common'], function ($, common) {
 
-	app.directive('fadeInLoad', ['$rootScope', function ($rootScope) {
+	common.directive('fadeInLoad', ['$rootScope', function ($rootScope) {
 
 		return {
 			restrict: 'A',

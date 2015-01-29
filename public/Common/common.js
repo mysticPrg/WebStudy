@@ -3,7 +3,9 @@
  */
 
 define([
-	'Directive/fadeInLoad'
-], function() {
+	'angular'
+], function(angular) {
+	var common = angular.module('Common', []);
 
+	return common;
 });

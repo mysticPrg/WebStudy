@@ -50,6 +50,7 @@ require.config({
 			'Resource': '../Common/resources',
 			'Filter': '../Common/filters',
 			'Directive': '../Common/directives',
+			'Controller': '../Common/controllers',
 
 			// Pages
 			'Home': '../Home',

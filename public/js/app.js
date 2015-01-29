@@ -57,6 +57,7 @@ define([
 	app.config(function ($routeProvider, $mdThemingProvider, $compileProvider) {
 
 		$routeProvider
+			// User Pages
 			.when('/home', angularAMD.route({
 				templateUrl: 'Home/home.html',
 				css: ['Home/home.css'],
@@ -78,6 +79,17 @@ define([
 				controllerUrl: 'Detail/detailCtrl',
 				title: 'Detail Page'
 			}))
+
+			// Admin Pages
+			.when('/admin/login', angularAMD.route({
+				templateUrl: 'Admin/Login/login.html',
+				css: ['Admin/Login/login.css'],
+				controller: 'loginCtrl',
+				controllerUrl: 'Admin/Login/loginCtrl',
+				title: 'Login'
+			}))
+
+			// Otherwise
 			.otherwise('/main');
 
 		// Pick [ red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey ]

@@ -54,7 +54,8 @@ require.config({
 			// Pages
 			'Home': '../Home',
 			'Main': '../Main',
-			'Detail': '../Detail'
+			'Detail': '../Detail',
+			'Admin': '../Admin'
 		}
 	},
 

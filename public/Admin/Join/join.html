@@ -1,35 +1,11 @@
-<style>
-	#login-card {
-		width: 400px;
-		height: 360px;
-	}
-
-	span.axi {
-		margin-right: 20px;
-		font-size: 30px;
-	}
-
-	.md-button {
-		min-width: 100px;
-	}
-
-	md-input-container {
-		margin-bottom: 20px;
-	}
-
-	#login-btns {
-		margin-top: 30px;
-	}
-</style>
-
 <div layout="column" layout-fill layout-align="center center" fade-in-load>
-	<md-card id="login-card" class="md-whiteframe-z3">
+	<md-card id="join-card" class="md-whiteframe-z3">
 		<md-toolbar layout="row" layout-padding layout-align="center center">
 			<span class="axi axi-person-add"></span><span>Join</span>
 		</md-toolbar>
 
 		<md-card-content layout-padding layout-fill>
-			<form id="login-form" layout="column">
+			<form id="join-form" layout="column">
 				<md-input-container>
 					<label>ID</label>
 					<input type="text" ng-model="userid" name="userid" focus-on="userid" required>
@@ -45,7 +21,7 @@
 					<input type="password" ng-model="userpw2" name="userpw2" focus-on="userpw2" required>
 				</md-input-container>
 
-				<div id="login-btns" layout="row" layout-fill layout-align="space-around center">
+				<div id="join-btns" layout="row" layout-fill layout-align="space-around center">
 					<md-button class="md-raised md-primary">Join Now</md-button>
 				</div>
 			</form>
